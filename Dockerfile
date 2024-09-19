@@ -17,3 +17,8 @@ RUN apt-get update \
 
 COPY --chown=www-data:www-data . .
 COPY --chown=www-data:www-data config/config.inc.php.dist config/config.inc.php
+
+# Taken from AWS Docs https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html
+ENV AWS_KEY=AKIAIOSFODNN7EXAMPLE
+ENV AWS_SECRET=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
